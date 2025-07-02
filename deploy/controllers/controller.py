@@ -31,8 +31,11 @@ esekf = ESEKF(dt=1. / 50.)
 torch.set_printoptions(precision=3)
 np.set_printoptions(precision=3)
 
-usb_left = UsbHandle("/dev/ttyACM0")
-usb_right = UsbHandle("/dev/ttyACM1")
+usb_left = UsbHandle("/tmp/virtual_joysticks/ttyACM0")
+usb_right = UsbHandle("/tmp/virtual_joysticks/ttyACM1")
+
+# usb_left = UsbHandle("/dev/ttyACM0")
+# usb_right = UsbHandle("/dev/ttyACM1")
 # Start receiving threads
 usb_left.start_receiving()
 usb_right.start_receiving()
