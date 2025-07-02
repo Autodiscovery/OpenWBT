@@ -13,7 +13,7 @@ Value = context._default_context.Value
 
 class TeleVision:
 
-    def __init__(self, binocular, img_shape, img_shm_name, cert_file="./cert.pem", key_file="./key.pem", ngrok=False):
+    def __init__(self, binocular, img_shape, img_shm_name, cert_file="./cert.pem", key_file="./key.pem", ngrok=True):
         self.binocular = binocular
         self.img_height = img_shape[0]
         if binocular:  # split the image width to half of the device witdh to adapt to the binocular mode
